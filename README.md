@@ -23,14 +23,14 @@ data, and aligning semantic and structural methods.
 
 ### Knowledge Graph Construction
 
-![img](flowchart-kgconstruct.drawio.png)
+![img](narrative_explaination\assets\flowchart-kgconstruct.drawio.png)
 
 The knowledge graph encodes relationships between narratives, explanations, authors, and books for structured and context-rich retrieval.
 
     
 ### Vector-Based Retrieval
 
-![img](flowchart-vectoringestion.png)
+![img](narrative_explaination\assets\flowchart-vectoringestion.png)
 
 Vector-based retrieval and reranking were used to enhance semantic search capabilities. Narratives were encoded into high-dimensional vectors using the pre-trained all-MiniLM-L6-v2 model from SentenceTransformers, which maps texts into a semantic space. These embeddings were indexed using FAISS with an IndexFlatL2 configuration optimized for L2 distance similarity. Queries were encoded into
 embeddings and matched with the top-k closest narratives from the FAISS index.
@@ -42,7 +42,7 @@ query-narrative interactions. This two-stage system combines the efficiency of F
 
 ### Hybrid Retrieval with Graph and Vector Store
 
-![img](flowchart-hybridrag.png)
+![img](narrative_explaination\assets\flowchart-hybridrag.png)
 
 
 The hybrid retrieval system combines the strengths of graph-based and vector-based methods for enhanced performance. Graphs, using Neo4j, excel at structured queries involving entity relationships,such as retrieving narratives by a specific author or explanations linked to keywords. However, they lack the ability to capture semantic similarity, which is addressed by vector-based methods like FAISS, enabling thematic and nuanced similarity searches in high-dimensional spaces.
@@ -57,7 +57,7 @@ Evaluating language models for explanation generation requires assessing readabi
 
 These metrics provide an objective framework for evaluating explanations across readability, complexity, diversity, and alignment, ensuring accessibility and coherence across domains.
 
-![img](Performance.png)
+![img](narrative_explaination\assets\Performance.png)
 
 The evaluation highlights strengths and weaknesses
 across metrics:

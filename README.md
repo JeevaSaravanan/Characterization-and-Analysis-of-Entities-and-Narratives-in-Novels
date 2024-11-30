@@ -58,9 +58,6 @@ The Narrative Theme Identification module uncovers dominant themes within novels
 
 ### Methodology
 ![img](narrative_extraction/assets/nar_theme_flowchart.png)
-## Narrative Theme Identification: Methodology and Results
-
-### Methodology
 
 #### **Text Splitting**:
 - Novels are split into **250-word chunks** for manageable, semantically coherent segments.
@@ -78,8 +75,6 @@ The Narrative Theme Identification module uncovers dominant themes within novels
 
 #### **Evaluation**:
 - Coherence scores assess cluster quality, optimized through iterative testing.
-
----
 
 ### Results
 

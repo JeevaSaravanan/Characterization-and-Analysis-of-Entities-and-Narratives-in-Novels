@@ -18,12 +18,14 @@ The **NER module** is responsible for identifying key entities such as character
 - Outputs entities for subsequent role and narrative classification.
 
 ### Results
+Below is the sample NERs detected in the book The Secret Adversary by Agatha Christie, this will be used in the Entity role clssification.
 <div style="display: flex; justify-content: center;">
     <img src="NER/assets/tuppence_ner.png" alt="Tupence NER" style="width: 20%; margin-right: 30px;">
     <img src="NER/assets/whitting_ner.png" alt="Whittington NER" style="width: 20%;">
 </div>
 
 ## Entity Role Classification
+The Entity Role Classification module identifies and categorizes characters in novels based on their narrative roles, such as Protagonist, Antagonist, or Supporting Character. It also assigns nuanced traits across moral, emotional, and behavioral dimensions, offering a detailed understanding of character dynamics and their contributions to the story.
 
 ### Methodology
 ![img](role_classification/assets/role_classification_pipeline.png)
@@ -52,29 +54,30 @@ The Entity Role Classification module was tested on The Secret Adversary by Agat
 </div>
 
 ## Narrative Theme Identification
+The Narrative Theme Identification module uncovers dominant themes within novels by clustering semantically similar text chunks. It provides a structured analysis of key narrative elements, enabling insights into plot progression, character interactions, and overarching storylines.
 
 ### Methodology
-![img](narrative_extraction\assets\nar_theme_flowchart.png)
+![img](narrative_extraction/assets/nar_theme_flowchart.png)
 ## Narrative Theme Identification: Methodology and Results
 
 ### Methodology
 
-1. **Text Splitting**:
-   - Novels are split into **250-word chunks** for manageable, semantically coherent segments.
+#### **Text Splitting**:
+- Novels are split into **250-word chunks** for manageable, semantically coherent segments.
    
-2. **Embedding Representation**:
-   - Text chunks are converted to **384-dimensional vectors** using `all-MiniLM-L6-v2`, clustering semantically similar chunks.
+#### **Embedding Representation**:
+- Text chunks are converted to **384-dimensional vectors** using `all-MiniLM-L6-v2`, clustering semantically similar chunks.
 
-3. **Dimensionality Reduction & Clustering**:
-   - **UMAP** reduces dimensions for efficient clustering.
-   - **HDBSCAN** groups chunks into themes and handles outliers based on density.
+#### **Dimensionality Reduction & Clustering**:
+- **UMAP** reduces dimensions for efficient clustering.
+- **HDBSCAN** groups chunks into themes and handles outliers based on density.
 
-4. **Theme Labeling**:
-   - **c-TF-IDF** and **KeyBERT** extract keywords.
-   - Labels are generated using **Mistral-7B-Instruct-v0.3** for global and book-specific themes.
+#### **Theme Labeling**:
+- **c-TF-IDF** and **KeyBERT** extract keywords.
+- Labels are generated using **Mistral-7B-Instruct-v0.3** for global and book-specific themes.
 
-5. **Evaluation**:
-   - Coherence scores assess cluster quality, optimized through iterative testing.
+#### **Evaluation**:
+- Coherence scores assess cluster quality, optimized through iterative testing.
 
 ---
 
@@ -123,14 +126,11 @@ understanding with structured relationships.
 This work introduces a hybrid retrieval system
 using semantic embeddings and knowledge graphs
 to enhance narrative retrieval. The objectives are:
-1. Develop a vector-based semantic search sys-
-tem.
+1. Develop a vector-based semantic search system.
 2. Build a knowledge graph to encode narrative
 relationships.
-3. Combine both methods into a hybrid re-
-trieval system with reranking.
-This approach addresses challenges such as cap-
-turing thematic connections, structuring relational
+3. Combine both methods into a hybrid retrieval system with reranking.
+This approach addresses challenges such as capturing thematic connections, structuring relational
 data, and aligning semantic and structural methods.
 
 

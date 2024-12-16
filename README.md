@@ -1,4 +1,4 @@
-# Characterization-and-Analysis-of-Entities-and-Narratives-in-Novels
+# Unveiling Narratives: Analyzing Character Roles and Themes in Novels
 This repository contains the implementation of NLP modules for analyzing novels, focusing on identifying named entities, classifying their roles, and uncovering dominant narratives and themes. The project leverages advanced natural language processing techniques to provide deeper insights into plot progression, character dynamics, and thematic elements in literature.
 
 ## Datasets:

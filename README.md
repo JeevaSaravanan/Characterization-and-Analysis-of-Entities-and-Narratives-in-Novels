@@ -14,6 +14,7 @@ We downloaded a collection of 3,036 English books written by 142 authors from th
     - **Encoder:** SentenceTransformers (all-MiniLM-L6-v2)
     - **Vector Database:** FAISS
     - **Graph Daatbase:** Neo4j
+    - **LLM:**  GPT-4, LlaMA 3.1 8B instruct, Mistral 8 7B× instruct, Titan-text-express v1
 
 ## Named Entity Recognition (NER)
 

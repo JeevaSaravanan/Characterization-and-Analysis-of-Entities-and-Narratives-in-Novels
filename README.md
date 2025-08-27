@@ -4,6 +4,16 @@ This repository contains the implementation of NLP modules for analyzing novels,
 ## Datasets:
 We downloaded a collection of 3,036 English books written by 142 authors from the Gutenberg Dataset for our analysis.
 
+## Tools & Framework used:
+- **Named Entity Recognition (NER):** SpaCy, RoBERTa
+- **Role & Trait Classification:** Zero-Shot Classification Models
+- **Narrative Theme Identification:**
+    - **Encoder:** SentenceTransformers (all-MiniLM-L6-v2)
+    - **LLM:** Mistral-7B-Instruct-v0.3
+- **Narrative Explanation & Retrieval:**
+    - **Encoder:** SentenceTransformers (all-MiniLM-L6-v2)
+    - **Vector Database:** FAISS
+    - **Graph Daatbase:** Neo4j
 
 ## Named Entity Recognition (NER)
 
